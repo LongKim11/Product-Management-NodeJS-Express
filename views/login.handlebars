@@ -1,0 +1,31 @@
+<div class="containter w-25 my-5 mx-auto">
+  <h1 class="mb-3">Đăng nhập</h1>
+  <form action="/login" method="POST">
+    <div class="form-group mb-3">
+      <label for="inputEmail">Email address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputEmail"
+        placeholder="Enter email"
+        name="email"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <label for="inputPassword">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="inputPassword"
+        placeholder="Enter password"
+        name="password"
+      />
+    </div>
+    {{#if msg}}
+      <div class="alert alert-danger" role="alert">
+        {{msg}}
+      </div>
+    {{/if}}
+    <button type="submit" class="btn btn-primary">Log in</button>
+  </form>
+</div>
